@@ -22,3 +22,6 @@ Function: In a nutshell you run git push [alias] [branch] to update a remote rep
 Pull:
 git pull
 Function: fetch from a remote repo and try to merge into the current branch
+
+
+Source: http://gitref.org/basic/#add
