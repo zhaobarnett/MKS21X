@@ -18,3 +18,7 @@ You do this after commiting the file.
 Function: In a nutshell you run git push [alias] [branch] to update a remote repository with the changes you've made locally. It will take what your [branch] looks like and push it to be [branch] on the remote, if possible.
 
 **Remote repository is the github repository.
+
+Pull:
+git pull
+Function: fetch from a remote repo and try to merge into the current branch
