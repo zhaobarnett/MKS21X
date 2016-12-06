@@ -11,3 +11,8 @@ Commit:
 git commit -m 'message'
 You do this after adding the file.
 Function: Now that you have staged the content you want to snapshot with the git add command, you run git commit to actually record the snapshot.
+
+Push:
+git push github [branch]
+You do this after commiting the file.
+Function: In a nutshell you run git push [alias] [branch] to update a remote repository with the changes you've made locally. It will take what your [branch] looks like and push it to be [branch] on the remote, if possible. 
