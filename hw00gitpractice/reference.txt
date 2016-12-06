@@ -1,0 +1,12 @@
+Cloning (copy a repo to your local machine):
+git clone <web URL>
+You do this within the directory you want to make the local repo in.
+
+Adding:
+git add <file name> 
+You do this within the directory the file is in.
+Function: In a nutshell, you run git add on a file when you want to include whatever changes you've made to it in your next commit snapshot. Anything you've changed that is not added will not be included
+
+Commit:
+git commit -m 'message'
+Function: Now that you have staged the content you want to snapshot with the git add command, you run git commit to actually record the snapshot.
