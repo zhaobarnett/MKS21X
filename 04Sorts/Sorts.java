@@ -31,6 +31,22 @@ public class Sorts{
       }
   }
 
+    public static void insertionSort(int[] data){
+	//determine up to where it is sorted
+	int beginSort;
+	for (int i = 0; i < data.length; i++){
+	    if (data[i] >= data[i+1]){
+		beginSort = i;
+	    }
+	}
+	//variable to put temp number in
+	int temp;
+	for (int x = 0; x < beginSort; x++){
+	    
+	    beginSort += 1;
+
+    }
+
     public static void main(String[] args){
 	//basic
 	int[] a = {7,3,8,1,9,4,6};
