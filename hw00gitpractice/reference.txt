@@ -25,3 +25,7 @@ Function: fetch from a remote repo and try to merge into the current branch
 
 
 Source: http://gitref.org/basic/#add
+
+
+Another useful resource from CS Dojo: http://dojo.stuycs.org/tutorials/git.html
+"cheat sheet": https://lh3.googleusercontent.com/-3ggb6XOWxZs/WFNTugtFnsI/AAAAAAAAAH8/05u5dRtgoj0PBhNUooxVHDBhcY9P-Jy0gCLcB/s1600/11111.jpg
