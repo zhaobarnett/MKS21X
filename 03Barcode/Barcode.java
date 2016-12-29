@@ -138,6 +138,7 @@ public class Barcode implements Comparable<Barcode>{
 	else {
 	    return retVal.substring(0,5);
 	}
+	
     }
 }
 
