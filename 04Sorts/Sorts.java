@@ -34,17 +34,25 @@ public class Sorts{
     public static void insertionSort(int[] data){
 	//determine up to where it is sorted
 	int beginSort;
+	//variable to put temp number in
+	int temp;
 	for (int i = 0; i < data.length; i++){
 	    if (data[i] >= data[i+1]){
 		beginSort = i;
+		temp = data[i];
 	    }
-	}
-	//variable to put temp number in
-	int temp;
-	for (int x = 0; x < beginSort; x++){
-	    
-	    beginSort += 1;
+	    //location for temp
+	    int location = 0;
+	    for (int x = 0; x < beginSort; x++){
+		if (temp < data[x]){
+		    location = x;
+		}
+		beginSort += 1;
 
+
+    public static void bubbleSort(int[] data){
+	
+	
     }
 
     public static void main(String[] args){
