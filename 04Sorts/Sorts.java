@@ -30,55 +30,106 @@ public class Sorts{
 	  }
       }
   }
+    
 
     public static void insertionSort(int[] data){
-	//determine up to where it is sorted
-	int beginSort;
-	//variable to put temp number in
-	int temp;
-	for (int i = 0; i < data.length; i++){
-	    if (data[i] >= data[i+1]){
-		beginSort = i;
-		temp = data[i];
-	    }
-	    //location for temp
-	    int location = 0;
-	    for (int x = 0; x < beginSort; x++){
-		if (temp < data[x]){
-		    location = x;
+	//start with the first two books (Janice's video), so i = 1
+	for (int i = 1; i < data.length; i++){
+	    //variable to put temp number in
+	    int temp = data[i];
+	    //move ints over to the right until the correct location for temp is reached
+	    int x;
+	    for(x = i; x > 0; x--){
+		if (temp < data[x-1]){
+		    data[x] = data[x-1];
 		}
-		beginSort += 1;
-
-
-    public static void bubbleSort(int[] data){
-	
-	
+		else {
+		    break; //1 is not subtracted
+		}
+	    }
+	    data[x] = temp;
+	    }
+	//after each outer loop, you introduce "another book" and the inner loop loops towards zero and places temp in the appropriate location
     }
 
+    
+    public static void bubbleSort(int[] data){
+	//outer loop pervents checking end elements which are already in place
+	int x;
+	for(x = data.length; x > 0; x--){
+	    for(int i = 0; i < x-2; i++){
+		if(data[i] > data[i+1]){
+		    //switching two adjacent elements
+		    int temp = data[i];
+		    data[i] = data[i+1];
+		    data[i+1] = temp;
+		}
+	    }
+	}
+    }
+	
+
     public static void main(String[] args){
-	//basic
-	int[] a = {7,3,8,1,9,4,6};
-	selectionSort(a);
-	System.out.println(Arrays.toString(a));
-	System.out.println("same as [1, 3, 4, 6, 7, 8, 9]");
-
-	//repeated element
-	int[] b = {7,3,8,1,9,4,7,6};
-	selectionSort(b);
-	System.out.println(Arrays.toString(b));
-	System.out.println("same as [1, 3, 4, 6, 7, 7, 8, 9]");	
-
-	//empty array
+	int[] a = {1,3,4,6,7,8,9};
+	int[] b = {1,3,4,6,7,7,8,9};
 	int[] c = {};
-	selectionSort(c);
-	System.out.println(Arrays.toString(c));
-	System.out.println("same as []");	
-
-	//edge case: 1 element
 	int[] d = {55};
-	selectionSort(d);
-	System.out.println(Arrays.toString(d));
-       	System.out.println("same as [55]");
+
+	//selectionSort
+	//basic
+	int[] a1 = {7,3,8,1,9,4,6};
+	selectionSort(a1);
+	System.out.println(Arrays.equals(a,a1));
+	//repeated element
+	int[] b1 = {7,3,8,1,9,4,7,6};
+	selectionSort(b1);
+	System.out.println(Arrays.equals(b,b1));
+	//empty array
+	int[] c1 = {};
+	selectionSort(c1);
+	System.out.println(Arrays.equals(c,c1));	
+	//edge case: 1 element
+	int[] d1 = {55};
+	selectionSort(d1);
+	System.out.println(Arrays.equals(d,d1));
+
+
+	//insertionSort
+	//basic
+	int[] a2 = {7,3,8,1,9,4,6};
+	insertionSort(a2);
+	System.out.println(Arrays.equals(a,a2));
+	//repeated element
+	int[] b2 = {7,3,8,1,9,4,7,6};
+	insertionSort(b2);
+	System.out.println(Arrays.equals(b,b2));
+	//empty array
+	int[] c2 = {};
+	insertionSort(c2);
+	System.out.println(Arrays.equals(c,c2));	
+	//edge case: 1 element
+	int[] d2 = {55};
+	insertionSort(d2);
+	System.out.println(Arrays.equals(d,d2));
+
+
+	//bubbleSort
+	//basic
+	int[] a3 = {7,3,8,1,9,4,6};
+	insertionSort(a3);
+	System.out.println(Arrays.equals(a,a3));
+	//repeated element
+	int[] b3 = {7,3,8,1,9,4,7,6};
+	insertionSort(b3);
+	System.out.println(Arrays.equals(b,b3));
+	//empty array
+	int[] c3 = {};
+	insertionSort(c3);
+	System.out.println(Arrays.equals(c,c3));	
+	//edge case: 1 element
+	int[] d3 = {55};
+	insertionSort(d3);
+	System.out.println(Arrays.equals(d,d3));
     }
 
 }
